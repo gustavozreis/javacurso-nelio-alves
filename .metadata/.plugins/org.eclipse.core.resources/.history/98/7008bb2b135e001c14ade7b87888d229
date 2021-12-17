@@ -1,0 +1,28 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Employee;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Name:");
+		String employeeName = sc.nextLine();
+		System.out.print("Gross salary:");
+		double employeeGrossSalary = sc.nextDouble();
+		System.out.print("Tax:");
+		double employeeTax = sc.nextDouble();
+		
+		Employee joaoSilva = new Employee(employeeName, employeeGrossSalary, employeeTax);
+		
+		joaoSilva.employeeData();
+		
+		sc.close();	
+		
+	}
+
+}

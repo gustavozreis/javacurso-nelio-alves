@@ -1,0 +1,34 @@
+package application;
+
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		//input scanner
+		Scanner input = new Scanner(System.in);
+		
+		//inputs tamanho matriz
+		System.out.print("Insert matrix legth: ");
+		int m = input.nextInt();
+		System.out.print("Insert matrix height: ");
+		int n = input.nextInt();
+		
+		//criação da matriz com inputs
+		int[][] matrix01 = new int[m][n];
+		
+		for (int i=0; i<m; i++) {
+			for (int j=0; j<n; i++) {
+				matrix01[m][n] = input.nextInt();
+			}
+		}
+		
+		System.out.println(matrix01);
+	
+		
+		
+
+	}
+
+}

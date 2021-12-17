@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int alcool = 1;
+		int gasolina = 2;
+		int diesel = 0;
+		
+		System.out.println("Insira o código do produto:");
+		int codigoProduto = sc.nextInt();
+		
+		while (codigoProduto == 1 || codigoProduto == 2 || codigoProduto == 3) {
+			if (codigoProduto == 1) {
+				System.out.println("Alcool: " + alcool);
+				System.out.println("Insira o código do produto:");
+			} else if (codigoProduto == 2) {
+				System.out.println("Gasolina: " + gasolina);
+				System.out.println("Insira o código do produto:");
+			} else if (codigoProduto == 3) {
+				System.out.println("Diesel: " + diesel);
+				System.out.println("Insira o código do produto:");
+			} else {
+				System.out.println("Insira um código de 1 a 4:");
+			}
+			codigoProduto = sc.nextInt();
+		}
+		
+		System.out.println("MUITO OBRIGADO");
+
+		
+		
+		
+		sc.close();
+		
+	}
+}

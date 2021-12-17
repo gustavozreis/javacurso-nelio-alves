@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Insira o número de testes:");
+		int N = sc.nextInt();
+		
+		for (int i = 0; i <= N; i++) {
+			System.out.println("Insira 3 doubles:");
+			double double1;
+			double double2;
+			double double3;
+			double1 = sc.nextDouble();
+			double2 = sc.nextDouble();
+			double3 = sc.nextDouble();
+			
+			double mediaPonderada = ((double1*2) + (double2*3) + (double3*5)) / 10;
+			System.out.printf("A média ponderada é %.1f", mediaPonderada);
+			System.out.println();
+		
+		}
+		
+	}
+}

@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Insira a hora inicial:");
+		int horaInicial = sc.nextInt();
+		
+		System.out.println("Insira a hora final:");
+		int horaFinal = sc.nextInt();
+		
+		//if (horaFinal < 12) {
+		//	horaInicial /= 2;
+		//}
+		
+		int horasTotais = 24 - (horaInicial - horaFinal) ;
+		
+		if (horasTotais <= 24 && horasTotais >=1) {
+			System.out.println("O JOGO DUROU " + horasTotais + " HORA(S)");
+		} else if (horasTotais < 1) {
+			System.out.println("O jogo precisa ter durado no mínimo 1 hora");
+		} else {
+			System.out.println("O jogo precisa ter durado no máximo 24 horas");
+		}
+		
+		sc.close();
+		
+	}
+}

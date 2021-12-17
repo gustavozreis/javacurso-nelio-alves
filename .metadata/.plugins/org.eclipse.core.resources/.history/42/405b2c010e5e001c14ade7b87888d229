@@ -1,0 +1,35 @@
+
+public class Rectangle {
+	
+	double width;
+	double height;
+	
+	public Rectangle(double recWidth, double recHeight) {
+		width = recWidth;
+		height = recHeight;
+	}
+	
+	double recArea;
+	double recPerimeter;
+	double recDiagonal;
+	
+	public void recArea() {
+		recArea = width * height;		
+	}
+	
+	public void recPerimeter() {
+		recPerimeter = width * 2 + height * 2;
+	}
+	
+	public void recDiagonal() {
+		recDiagonal = Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
+	}
+	
+	public void resultado() {
+		System.out.println("AREA = " + recArea);
+		System.out.println("PERIMETER = " + recPerimeter);
+		System.out.println("DIAGONAL = " + recDiagonal);
+	}
+
+	
+}

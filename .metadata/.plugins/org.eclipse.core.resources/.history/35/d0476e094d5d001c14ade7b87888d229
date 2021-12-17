@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+
+		int n = sc.nextInt();
+		
+		int fat = n;
+		for (int i=fat; i>0; i--) {
+			fat = fat * i;
+		}
+		
+		System.out.println(fat);
+		
+		sc.close();
+	}
+}

@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Insira o número:");
+		double numeroTeste = sc.nextDouble();
+		
+		if (numeroTeste > 0 && numeroTeste < 25) {
+			System.out.println("Intervalo [0,25]");
+		} else if (numeroTeste >= 25 && numeroTeste <= 50 ) {
+			System.out.println("Intervalo (25,50]");
+		} else if (numeroTeste > 50 && numeroTeste <= 75 ) {
+			System.out.println("Intervalo (50,75]");
+		} else {
+			System.out.println("Intervalo (75,100]");
+		}
+		
+		
+		sc.close();
+		
+	}
+}

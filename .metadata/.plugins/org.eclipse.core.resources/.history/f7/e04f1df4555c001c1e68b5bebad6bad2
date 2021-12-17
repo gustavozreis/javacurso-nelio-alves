@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String x;
+		System.out.println("Digite seu nome:");
+		x = sc.next();
+		
+		System.out.println("Seu nome é " + x);
+		
+		System.out.println("Insira o primeiro valor da soma:");
+		int primerValor = sc.nextInt();
+		System.out.println("Insira o segundo valor da soma:");
+		int segunValor = sc.nextInt();
+		int somaTotal = primerValor + segunValor;
+		System.out.println("O resultado da soma é:" + somaTotal);
+		
+		
+		sc.close();
+	}
+
+}

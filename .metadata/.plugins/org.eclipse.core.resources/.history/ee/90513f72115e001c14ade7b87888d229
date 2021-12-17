@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+import entities.Employee;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Insert employee name, gross salary and tax:");
+		String employeeName = sc.nextLine();
+		double employeeGrossSalary = sc.nextDouble();
+		double employeeTax = sc.nextDouble();
+		
+		Employee joaoSilva = new Employee(employeeName, employeeGrossSalary, employeeTax);
+		
+		joaoSilva.employeeData();
+		
+		sc.close();	
+		
+	}
+
+}

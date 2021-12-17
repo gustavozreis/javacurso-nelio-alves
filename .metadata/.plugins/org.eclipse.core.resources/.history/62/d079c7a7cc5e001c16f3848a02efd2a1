@@ -1,0 +1,39 @@
+
+public class Account {
+
+	final int accountNumber;
+	String accountHolder;
+	private double accountBalance;
+	
+	Account(String accountHolder, int accountNumber, double accountBalance) {
+		this.accountHolder = accountHolder;
+		this.accountNumber = accountNumber;
+		this.accountBalance = accountBalance;		
+	}
+	
+	Account(String accountHolder, int accountNumber) {
+		this.accountHolder = accountHolder;
+		this.accountNumber = accountNumber;	
+	}
+	
+	public double getAccountBalance() {
+		return accountBalance;
+	}
+	
+	public void setAccountBalance(double accountBalance) {
+		this.accountBalance = accountBalance;
+	}
+	
+	public void deposit(double depositValue) {
+		accountBalance += depositValue;
+	}
+	
+	public void withdraw(double withdrawValue) {
+		accountBalance -= withdrawValue - 5.00;
+	}
+	
+	public void accountData() {
+		System.out.println("Account " + accountNumber + " , Holder: " + accountHolder + ", Balance: $ " + getAccountBalance());
+	}
+	
+}

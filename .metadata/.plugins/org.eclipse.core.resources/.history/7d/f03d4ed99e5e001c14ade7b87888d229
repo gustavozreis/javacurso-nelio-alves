@@ -1,0 +1,45 @@
+
+public class Alunos {
+	
+	String nomeAluno;
+	double primeiraNota;
+	double segundaNota;
+	double terceiraNota;
+	double finalGrade;
+	
+	//construtor?
+	public Alunos(String nomeAluno,
+				  double primeiraNota,
+				  double segundaNota,
+				  double terceiraNota) {
+		
+		nomeAluno = this.nomeAluno;
+		primeiraNota = this.primeiraNota;
+		segundaNota = this.segundaNota;
+		terceiraNota = this.terceiraNota;
+	}
+	
+	//operação da média
+	public double finalGrade() {
+		return primeiraNota + segundaNota + terceiraNota;
+	}
+	
+	//passou de ano ou nao
+	public void passOrNot() {
+		double pontosFaltando = 60 - finalGrade();
+		if (finalGrade() >= 60) {
+			System.out.println("PASS");
+		} else {
+			System.out.println("FAILED");
+			System.out.printf("MISSING %.2f POINTS ", pontosFaltando);
+		};
+	}
+	
+	public void dadosAluno() {
+		System.out.printf("FINAL GRADE = %.2f ", finalGrade());
+		System.out.println();
+		passOrNot();
+	}
+
+}
+

@@ -1,0 +1,41 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		//inputs do usuario
+		System.out.print("Enter account number: ");
+		int accountNumber = sc.nextInt();
+		
+		System.out.print("Enter account holder name: ");
+		String accountHolder = sc.nextLine();
+		System.out.println();
+		
+		System.out.print("Is there an initial deposit (y/n)? ");
+		String initialDepositExists = sc.nextLine();
+		
+		double initialDeposit = 0;
+		
+		if (initialDepositExists.equals("y")) {
+			System.out.print("Enter initial deposit value: ");
+			initialDeposit = sc.nextDouble();
+		} else {
+			initialDeposit = 0;
+		}
+
+		Account conta01 = new Account(accountHolder, accountNumber, initialDeposit);
+		
+		System.out.println("Account data:");
+		conta01.accountData();
+
+		
+		sc.close();
+		
+	}
+
+}

@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int coord1;
+		int coord2;
+		
+		System.out.println("Insira as coordenadas:");
+		coord1 = sc.nextInt();
+		coord2 = sc.nextInt();
+		
+		while (coord1 != 0 && coord2 != 0) {
+			if (coord1 > 0 && coord2 > 0) {
+				System.out.println("primeiro");
+			} else if (coord1 < 0 && coord2 > 0) {
+				System.out.println("segundo");
+			} else if (coord1 < 0 && coord2 < 0) {
+				System.out.println("terceiro");
+			} else {
+				System.out.println("quarto");
+			}
+			
+			coord1 = sc.nextInt();
+			coord2 = sc.nextInt();
+		}
+		
+		System.out.println("programa encerrado");
+		
+		sc.close();
+						
+	}
+}

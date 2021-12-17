@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//invocar a classe Rectangle com os parâmetros altura, largura
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter rectangle width and height:");
+		
+		double rectangleWidth = sc.nextDouble();
+		double rectangleHeight = sc.nextDouble();
+		
+		Rectangle rectangle1 = new Rectangle(rectangleWidth, rectangleHeight);
+		System.out.println(rectangle1.recArea);
+		
+		sc.close();		
+
+	}
+
+}
