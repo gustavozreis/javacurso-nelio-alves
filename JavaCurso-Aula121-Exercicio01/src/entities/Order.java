@@ -8,7 +8,7 @@ import java.util.List;
 import entities.enums.OrderStatus;
 
 public class Order {
-
+	
 	private static SimpleDateFormat oMomFormat= new SimpleDateFormat("dd/MM/yyyy HH:mm:ss"); //order moment date format
 	private static SimpleDateFormat cBDateFormat = new SimpleDateFormat("dd/MM/yyyy"); //client birth date format	
 	
@@ -72,30 +72,33 @@ public class Order {
 		items.remove(item);
 	}
 	
-	public Double total() {
-		Double total = 0.0;
+	//get total order price
+	public double total() {
+		double totalSum = 0.0;
 		for (OrderItem item : items) {
-			Double sum = item.getPrice() * item.getQuantity();
-			total += sum;
+			totalSum += item.subTotal();
 		}
-		return total;
+		return totalSum;
 	}
 	
 	//toString ORDER SUMMARY
+	@Override
 	public String toString() {
 		StringBuilder sBuild = new StringBuilder();
 		sBuild.append("ORDER SUMMARY: \n");
 		sBuild.append("Order moment: " + oMomFormat.format(moment) + "\n");
 		sBuild.append("Order status: " + getStatus() + "\n");
-		sBuild.append("Client: " + client.getUsername() + " " + "(" + cBDateFormat.format(client.getBirthDate()) + ") - " + client.getEmail() + "\n");
+		sBuild.append("Client: " 
+					+ client.getUsername() 
+					+ " (" + cBDateFormat.format(client.getBirthDate()) + ") - " 
+					+ client.getEmail() 
+					+ "\n");
 		sBuild.append("Order items:\n");
 		for (OrderItem item : items) {
-			sBuild.append(item.product.getName() 
+			sBuild.append(item.getProduct().getName() 
 					+ ", $" + item.getPrice() 
-					+ ", Quantity: "  
-					+ item.getQuantity()
-					+ ", Subtotal: $"
-					+ item.subTotal() 
+					+ ", Quantity: " + item.getQuantity()
+					+ ", Subtotal: $" + item.subTotal() 
 					+ "\n");			
 		}
 		sBuild.append("Total price: $" + total());	
