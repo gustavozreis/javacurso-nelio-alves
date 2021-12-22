@@ -24,12 +24,17 @@ public class ImportedProduct extends Product {
 		this.customsFee = customsFee;
 	}
 	
+	// método que calcula o preço total com taxa
+	public Double totalPrice() {
+		return super.getPrice() + customsFee;
+	}
+	
 	@Override
 	// método para imprimir price tag sobrescrito
 	public String priceTag() {
-		return this.getName() 
+		return getName() 
 				+ " $ " 
-				+ String.format("%.2f", this.getPrice()) 
+				+ String.format("%.2f", this.totalPrice()) 
 				+ " (Customs fee: $ " 
 				+ String.format("%.2f", this.getCustomsFee()) 
 				+ ")";

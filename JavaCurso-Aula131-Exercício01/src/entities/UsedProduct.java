@@ -32,9 +32,9 @@ public class UsedProduct extends Product {
 	@Override
 	// método para imprimir price tag sobrescrito
 	public String priceTag() {
-		return this.getName()
+		return getName()
 				+ " (used) "
-				+ " $ " 
+				+ "$ " 
 				+ String.format("%.2f", this.getPrice())
 				+ " (Manufacture date: " 
 				+ manuDate.format(this.getManufactureDate())
