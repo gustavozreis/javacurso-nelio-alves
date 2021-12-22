@@ -5,7 +5,7 @@ public class OrderItem {
 	private Integer quantity;
 	private Double price;
 	
-	Product product;;
+	private Product product;
 
 	//construtctors
 	public OrderItem() {
@@ -39,7 +39,7 @@ public class OrderItem {
 		return product;
 	}
 	
-	//method to return order price total
+	//method to return order item total
 	public Double subTotal() {
 		return quantity * price;
 	}

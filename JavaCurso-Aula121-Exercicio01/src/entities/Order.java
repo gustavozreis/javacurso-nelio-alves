@@ -19,7 +19,7 @@ public class Order {
 	
 	private List<OrderItem> items = new ArrayList<>();
 	
-	//constructors
+	// constructors
 	public Order() {
 		
 	}
@@ -30,7 +30,7 @@ public class Order {
 		this.client = client;
 	}
 
-	//getters and setters
+	// getters and setters
 	public Date getMoment() {
 		return moment;
 	}
@@ -60,28 +60,28 @@ public class Order {
 	}
 
 	
-	//methods
+	// methods
 	
-	//add item to list
+	// add item to list
 	public void addItem(OrderItem item) {
 		items.add(item);
 	}
 	
-	//remove item from list
+	// remove item from list
 	public void removeItem(OrderItem item) {
 		items.remove(item);
 	}
 	
-	//get total order price
-	public double total() {
-		double totalSum = 0.0;
+	// get total order price
+	public Double total() {
+		Double totalSum = 0.0;
 		for (OrderItem item : items) {
 			totalSum += item.subTotal();
 		}
 		return totalSum;
 	}
 	
-	//toString ORDER SUMMARY
+	// toString ORDER SUMMARY
 	@Override
 	public String toString() {
 		StringBuilder sBuild = new StringBuilder();

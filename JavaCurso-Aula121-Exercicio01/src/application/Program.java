@@ -20,8 +20,8 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		//client birth date string do Date() format
-		SimpleDateFormat bDateFormat = new SimpleDateFormat("dd/MM/yyyy"); //client birth date format	
+		//client birth date format	
+		SimpleDateFormat bDateFormat = new SimpleDateFormat("dd/MM/yyyy"); 
 		
 		//input client data
 		System.out.println("Enter client data:");
@@ -40,7 +40,7 @@ public class Program {
 		System.out.print("How many items to this order? ");
 		Integer orderItems = sc.nextInt();
 		
-		//initiate date when order was created
+		//instantiate date when order was created
 		Date moment = new Date();
 		
 		//instantiate order object
