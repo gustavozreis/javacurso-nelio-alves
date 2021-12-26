@@ -19,8 +19,8 @@ public class Program {
 		System.out.print("Number: ");
 		Integer accNumber = sc.nextInt();
 		System.out.print("Holder: ");
-		String accHolder = sc.nextLine();
 		sc.nextLine();
+		String accHolder = sc.nextLine();
 		System.out.print("Initial balance: ");
 		Double accBalance = sc.nextDouble();
 		System.out.print("Withdraw limit: ");
